@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Prices Dashboard</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 512 512"
+        xml:space="preserve"
+        width="40px"
+        height="40px"
+        fill="#000000"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <polygon
+            style="fill: #dfdfe1"
+            points="512,512 0,512 0,0 49.548,0 49.548,462.452 512,462.452 "
+          ></polygon>
+          <g>
+            <rect
+              x="99.097"
+              y="247.742"
+              style="fill: #ff6643"
+              width="49.548"
+              height="165.161"
+            ></rect>
+            <rect
+              x="198.194"
+              y="115.613"
+              style="fill: #ff6643"
+              width="49.548"
+              height="297.29"
+            ></rect>
+          </g>
+          <g>
+            <rect
+              x="297.29"
+              y="247.742"
+              style="fill: #ff4f19"
+              width="49.548"
+              height="165.161"
+            ></rect>
+            <rect
+              x="396.387"
+              y="115.613"
+              style="fill: #ff4f19"
+              width="49.548"
+              height="297.29"
+            ></rect>
+          </g>
+          <rect
+            x="272.516"
+            y="462.452"
+            style="fill: #cfcdd2"
+            width="239.484"
+            height="49.548"
+          ></rect>
+        </g>
+      </svg>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse px-2" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Carbon Prices Comparission
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cbam-co2-dashboard.html"
+              >CBAM CO2 Emissions</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="loader"></div>
+
+    <div class="container-fluid">
+      <!-- Global Filters -->
+      <div id="stickyFilters" class="row mb-4">
+        <div class="col-md-auto">
+          <label for="monthSelect" class="form-label">Filter by Month</label>
+          <select
+            class="form-select"
+            id="monthSelect"
+            style="
+              cursor: pointer;
+              background: none;
+              color: rgb(15, 15, 15);
+              border: 1px solid #ccc;
+              padding: 8px;
+              border-radius: 8px;
+            "
+          >
+            <!-- Options will be dynamically populated -->
+          </select>
+          <button
+            id="resetFilters"
+            class="btn btn-primary btn-hover-animation mx-4"
+            style="background-color: #d6002a; border-color: #d6002a"
+          >
+            <i class="bi bi-arrow-counterclockwise"></i> Reset Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="row">
+        <!-- Price Trends Chart -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-2">Carbon Price Trends</h5>
+              <div id="priceTrendsChart"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparative Bar Chart -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-2">Comparative Carbon Prices</h5>
+              <div id="comparativeBarChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--  Price Distribution Chart -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-2">Carbon Price Distribution</h5>
+              <div id="boxPlotChart"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carbon Flow Chart (Treemap) -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title mb-2">Carbon Flow Visualization</h5>
+              <div id="treemapChart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/carbon-prices.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

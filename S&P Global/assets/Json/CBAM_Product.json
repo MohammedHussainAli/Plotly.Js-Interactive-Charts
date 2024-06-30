@@ -1,0 +1,78 @@
+{
+  "co2_per_product": {
+    "aluminium": {
+      "Asia": 948,
+      "Canada": 828,
+      "China (mainland)": 852,
+      "Eastern Asia": 864,
+      "India": 720,
+      "Japan": 612,
+      "Malaysia": 576,
+      "North America": 864,
+      "Southern Asia": 756,
+      "Taiwan": 696,
+      "United Kingdom": 924,
+      "Western Asia": 888
+    },
+    "cement": {
+      "Asia": 853.6,
+      "Canada": 558.72,
+      "China (mainland)": 698.4,
+      "Eastern Asia": 744.96,
+      "India": 651.84,
+      "Japan": 527.68,
+      "Malaysia": 325.92,
+      "North America": 729.44,
+      "Southern Asia": 682.88,
+      "Taiwan": 403.52,
+      "Turkey": 853.6,
+      "United Kingdom": 838.08,
+      "Western Asia": 853.6
+    },
+    "chemicals": {
+      "Asia": 8652,
+      "Canada": 6048,
+      "China (mainland)": 7434,
+      "Eastern Asia": 7686,
+      "India": 5586,
+      "Japan": 4326,
+      "Malaysia": 3780,
+      "North America": 7434,
+      "Southern Asia": 5838,
+      "Taiwan": 3444,
+      "Turkey": 6678,
+      "United Kingdom": 8568,
+      "Western Asia": 8064
+    },
+    "fertilizers": {
+      "Asia": 1176,
+      "Canada": 4958,
+      "China (mainland)": 1050,
+      "Eastern Asia": 1134,
+      "India": 966,
+      "Japan": 4440,
+      "Malaysia": 420,
+      "North America": 966,
+      "Southern Asia": 966,
+      "Taiwan": 378,
+      "Turkey": 1134,
+      "United Kingdom": 1176,
+      "Western Asia": 1134
+    },
+    "iron_and_steel": {
+      "Asia": 6105,
+      "Canada": 4958,
+      "China (mainland)": 5550,
+      "Eastern Asia": 5698,
+      "India": 5624,
+      "Japan": 4440,
+      "Malaysia": 3737,
+      "North America": 5698,
+      "Southern Asia": 5698,
+      "Taiwan": 4847,
+      "Turkey": 5883,
+      "United Kingdom": 5587,
+      "Western Asia": 5920
+    }
+  }
+}

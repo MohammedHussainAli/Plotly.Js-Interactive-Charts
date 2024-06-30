@@ -1,0 +1,73 @@
+/* Ensure the header and filters are sticky */
+#stickyHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#stickyFilters {
+  position: sticky;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  top: 0px;
+  background-color: #fff;
+  z-index: 999;
+  padding: 1rem 0.3rem;
+}
+
+.container-fluid {
+  overflow-y: auto;
+  height: calc(100vh - 80px);
+}
+
+.btn-hover-animation {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-hover-animation:hover {
+  transform: scale(1.05);
+}
+.card {
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.text-end {
+  text-align: start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+}
+
+#loader {
+  display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #d6002a;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

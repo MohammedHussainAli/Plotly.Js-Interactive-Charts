@@ -1,0 +1,115 @@
+{
+    "top_countries_sectors": [
+      {
+        "country": "Canada",
+        "sectors": {
+          "Aluminium": 6507635.156,
+          "Cement": 13305201.32,
+          "Chemicals": 140643326.6,
+          "Fertilizers": 118204926,
+          "Iron and Steel": 2190796309
+        },
+        "total": 2469494643
+      },
+      {
+        "country": "Brazil",
+        "sectors": {
+          "Aluminium": 755106.3245,
+          "Cement": 26949534.26,
+          "Chemicals": 48349936.13,
+          "Fertilizers": 235921.1651,
+          "Iron and Steel": 2062129135
+        },
+        "total": 2138419633
+      },
+      {
+        "country": "South Africa",
+        "sectors": {
+          "Aluminium": 6749056.208,
+          "Cement": 18078621.57,
+          "Chemicals": 36948688.65,
+          "Fertilizers": 374504.3518,
+          "Iron and Steel": 1934680735
+        },
+        "total": 1996831606
+      },
+      {
+        "country": "Turkey",
+        "sectors": {
+          "Aluminium": 28769254.21,
+          "Cement": 584570589.5,
+          "Chemicals": 151064957.5,
+          "Fertilizers": 49920452.77,
+          "Iron and Steel": 826574787.9
+        },
+        "total": 1640900042
+      },
+      {
+        "country": "China (mainland)",
+        "sectors": {
+          "Aluminium": 29311413.18,
+          "Cement": 54116076.07,
+          "Chemicals": 791746816.6,
+          "Fertilizers": 12086064.63,
+          "Iron and Steel": 680016572.5
+        },
+        "total": 1567280846
+      },
+      {
+        "country": "United States",
+        "sectors": {
+          "Aluminium": 4166158.55,
+          "Cement": 35157171.25,
+          "Chemicals": 936385479.6,
+          "Fertilizers": 72751857.51,
+          "Iron and Steel": 182842503.2
+        },
+        "total": 1231303170
+      },
+      {
+        "country": "United Kingdom",
+        "sectors": {
+          "Aluminium": 19472546.71,
+          "Cement": 59600287.02,
+          "Chemicals": 608322760.3,
+          "Fertilizers": 57565993.67,
+          "Iron and Steel": 328851879.1
+        },
+        "total": 1073902629
+      },
+      {
+        "country": "India",
+        "sectors": {
+          "Aluminium": 14477405.95,
+          "Cement": 9763005.899,
+          "Chemicals": 149411284.9,
+          "Fertilizers": 1781598.023,
+          "Iron and Steel": 598999890.8
+        },
+        "total": 774433186
+      },
+      {
+        "country": "Egypt",
+        "sectors": {
+          "Aluminium": 4398926.571,
+          "Cement": 60150014.43,
+          "Chemicals": 249630462.6,
+          "Fertilizers": 186029324,
+          "Iron and Steel": 114968385.5
+        },
+        "total": 615177113
+      },
+      {
+        "country": "South Korea",
+        "sectors": {
+          "Aluminium": 3657186.128,
+          "Cement": 172877.9721,
+          "Chemicals": 174636129.6,
+          "Fertilizers": 1027774.982,
+          "Iron and Steel": 353847052.8
+        },
+        "total": 533341021
+      }
+    ]
+  }
+  
